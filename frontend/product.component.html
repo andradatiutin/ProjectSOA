@@ -1,0 +1,37 @@
+<input type="text" id="title" name="title" [(ngModel)]="name"><br><br>
+<button class ="btn btn-warning"(click)="getProductByName()">Get product by name</button>
+<table class="table table-bordered">
+  <tbody>
+  <tr *ngFor="let p of this.products">
+    <td>{{p.name}}</td>
+    <td>{{p.price}}</td>
+    <td>{{p.quantity}}</td>
+  </tr>
+  </tbody>
+</table>
+<br><br><br>
+<button class ="btn btn-warning"(click)="buyProduct()">Buy Product</button>
+<br><br><br>
+<button class ="btn btn-warning"(click)="getShops()">Get shops</button>
+<br><br><br>
+<table class="table table-bordered">
+  <tbody>
+  <tr *ngFor="let s of this.shops">
+    <td>{{s.name}}</td>
+    <td>{{s.address}}</td>
+  </tr>
+  </tbody>
+</table>
+<br><br><br>
+<button class ="btn btn-warning"(click)="getProducts()">Get all products</button>
+<table class="table table-bordered">
+  <tbody>
+  <tr *ngFor="let p of this.productList">
+    <td>{{p.name}}</td>
+    <td>{{p.price}}</td>
+    <td>{{p.quantity}}</td>
+  </tr>
+  </tbody>
+</table>
+
+<button class ="btn btn-warning"(click)="logout()">Logout</button>
