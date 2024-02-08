@@ -1,0 +1,28 @@
+server:
+  port: 9099
+spring:
+  application:
+    name: gateway
+  cloud:
+    gateway:
+      routes:
+        - id: prod
+          uri: http://localhost:9090
+          predicates:
+            - Path=/prod/**
+        - id: prod
+          uri: http://localhost:9090
+          predicates:
+            - Path=/buy/**
+        - id: prod
+          uri: http://localhost:9090
+          predicates:
+            - Path=/prods
+        - id: shop
+          uri: http://localhost:9092
+          predicates:
+            - Path=/shop/**
+        - id: login
+          uri: http://localhost:9093
+          predicates:
+            - Path=/login
